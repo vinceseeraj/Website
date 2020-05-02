@@ -61,11 +61,17 @@ with the typical value of M being 100 Frames</p>
 <h1 style="color:white">Windowing</h1>
 
 <p style="color:white;text-indent: 40px" align="justify">
-	Windowing</br>	In this step each individual frame is windowed
+Windowing is a finite length of sequence, that is formed from an infintie length sequence by multiplying the infinite length sequence by a window.
+This technique is used to reduce the effcts of truncation of a wave from FFT over noninteger number of cycles. 
+Thus we get the real spectrum when we use windowing, and reduce spectral frequency which is when one frequency leaks into another.
+	
+</br style="text-indent: 40px">	In this step each individual frame is windowed
 This process assists in eliminating spectral distortion and noise.
 The idea here is to set the beginning and end of each frame to 0 so that the discontinuities can be eliminated.
 We define the window as w(n), in the specified interval shown, where N is the number of samples in each frame, then the result of windowing is the signal
-A typical windowing process is the Hamming window:</p>
+A typical windowing process is the Hamming window, the reason for this is that they have a low impact on the ampltiude accuracy for the frequency spectrum
+as oppose to other windows.
+Shown below is the weight equation of the Hamming Window:</p>
   <img src="Picture2.png" alt="frame" height="400" width="600">
 
 <div class="container">
