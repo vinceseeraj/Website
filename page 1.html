@@ -48,7 +48,6 @@ The 5 techniques depicted will be shown in more detail in their respective secti
  <figure class="right">
   <img src="Picture6.png" alt="mask" height="400" width="600">
   </figure> 
-<div class="container">
 	
 <h1 style="color:white">Frame Blocking</h1>
 <p style="color:white;text-indent: 40px" align="justify">The input signal, which is our recorded voices, is blocked into frames of N samples with
@@ -62,9 +61,7 @@ with the typical value of M being 100 Frames</p>
   <img src="Picture1.png" alt="frame" height="400" width="600">
 <p style="color:white"></p>
 
-<div class="container">
 <h1 style="color:white">Windowing</h1>
-<div class="a">
 
 <p style="color:white;text-indent: 40px" align="justify">
 Windowing is a finite length of sequence, that is formed from an infintie length sequence by multiplying the infinite length sequence by a window.
@@ -82,7 +79,6 @@ as oppose to other windows.
 	
   <img src="Picture2.png" alt="frame" height="400" width="600">
 
-<div class="container">
 <h1 style="color:white">Fast Fourier Transform (FFT)</h1>
 
 <p style="color:white;text-indent: 40px" align="justify">The Fast Fourier Transform converts each frame of N samples from the time domain to the Frequency Domain.
@@ -92,7 +88,6 @@ In general, X sub k are complex numbers and we only consider their absolute valu
 </p>
   <img src="Picture3.png" alt="frame" height="400" width="600">
 	
-<div class="container">
 <h1 style="color:white"> Mel-frequency Wrapping</h1>
 
 <p style="color:white;text-indent: 40px" align="justify">One way to simulate the subjective spectrum is to use a filter bank, spaced uniformly on the mel-scale. 
@@ -100,7 +95,6 @@ That filter bank has a triangular bandpass frequency response, and the spacing a
 The number of mel spectrum coefficients, K, is typically chosen as 20. </p>
   <img src="Picture4.png" alt="frame" height="400" width="600">
 	
-<div class="container">
 <h1 style="color:white">Cepstrum</h1>
 <p style="color:white;text-indent: 40px" align="justify">In the final step, we convert the log mel spectrum back to time.  The result is called the mel frequency cepstrum coefficients (MFCC).  The cepstral representation of the speech spectrum provides a good representation of the local spectral properties of the signal for the given frame analysis. 
 These sets of coefficients are also called acoustic vectors. One thing to note about this conversion is that it brings the system close to human listening response since we do not hear on a linear scale. 
@@ -114,8 +108,6 @@ Because the mel spectrum coefficients are real numbers, we can convert them to t
 <ol>
  </ol>
 </div>
-
-</div>   
 </div>
 
 </body>
