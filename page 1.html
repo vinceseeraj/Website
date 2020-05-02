@@ -74,6 +74,24 @@ We define the window as w(n), in the specified interval shown, where N is the nu
 A typical windowing process is the Hamming window:</p>
   <img src="Picture2.png" alt="frame" height="400" width="600">
 
+<div class="container">
+<h1 style="color:white">Fast Fourier Transform (FFT)</h1>
+
+<p style="color:white"
+>The Fast Fourier Transform converts each frame of N samples from the time domain to the Frequency Domain.
+The FFT is a fast algorithm to implement the Discrete Fourier Transform (DFT), which is defined on the set of N samples x sub n, as shown in the equation below.
+Here, k = 0,1,2,...,N-1.
+In general, X sub k are complex numbers and we only consider their absolute values (frequency magnitudes).
+</p>
+  <img src="Picture3.png" alt="frame" height="400" width="600">
+	
+<div class="container">
+<h1 style="color:white"> Mel-frequency Wrapping</h1>
+
+<p style="color:white">One way to simulate the subjective spectrum is to use a filter bank, spaced uniformly on the mel-scale. 
+That filter bank has a triangular bandpass frequency response, and the spacing as well as the bandwidth is determined by a constant mel frequency interval.  
+The number of mel spectrum coefficients, K, is typically chosen as 20. </p>
+  <img src="Picture4.png" alt="frame" height="400" width="600">
 
 <div class="footnote">
 <ol>
