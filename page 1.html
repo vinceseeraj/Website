@@ -73,13 +73,13 @@ This technique is used to reduce the effects of truncation of a wave from FFT ov
 When the FFT has these issues, it causes the energy of the frequency to leak into another freqeucny causing spectral frequency.
 As oppose to when windowing is applied, we get the real spectrum of the given waveform, and reduce spectral frequency error of FFT.
 	
-</br>	In this step each individual frame is windowed
+</br>	<div class="a">In this step each individual frame is windowed
 This process assists in eliminating spectral distortion and noise.
 The idea here is to set the beginning and end of each frame to 0 so that the discontinuities can be eliminated.
 We define the window as w(n), in the specified interval shown, where N is the number of samples in each frame, then the result of windowing is the signal
 A typical windowing process is the Hamming window, the reason for this is that they have a low impact on the ampltiude accuracy for the frequency spectrum
 as oppose to other windows.
-Shown below is the weight equation of the Hamming Window:</p>
+	Shown below is the weight equation of the Hamming Window:</div></p>
 	</div>
   <img src="Picture2.png" alt="frame" height="400" width="600">
 
