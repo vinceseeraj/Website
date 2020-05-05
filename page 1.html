@@ -36,7 +36,7 @@
   </div>
 </div>
 <div class="container">
-<h1 style="color:white">Mel-frequency cepstrum coefficients processor</h1>
+<h1 style="color:white">Mel-Frequency Cepstrum Coefficients Processor</h1>
 <p style="color:white;text-indent: 40px" align="justify">Speaker recognition is the process of automatically recognizing who is speaking on the basis of individual information included in speech waves. This technique makes it possible to use the speaker's voice to verify their identity and control access to services such as voice dialing, banking by telephone, telephone shopping, database access services, information services, voice mail, security control for confidential information areas, and remote access to computers.
 Speech input is typically recorded at a sampling rate of above 10,000 Hz. 
 This sampling frequency was chosen to minimize the effects of aliasing during analog-to-digital conversion. 
@@ -48,8 +48,8 @@ The 5 techniques depicted will be shown in more detail in their respective secti
 
  <figure class="right">
   <img src="Picture6.png" alt="mask" height="400" width="600">
-	<p style="color:white;text-indent: 40px" align="justify">
-		Figure 1: MFCC Design<sup>5</sup>
+	<p style="color:white" align="justify">
+		Figure 1: MFCC Steps for <sup>5</sup>
 	</p>
   </figure> 
 	
@@ -62,9 +62,12 @@ the samples incorrectly sample the amount needed for detection of voice. So when
 
 The Frames are then separated by a Frame Number, M 
 with the typical value of M being 100 Frames</p>
+ <figure class="right">	
   <img src="Picture1.png" alt="frame" height="400" width="600">
-<p style="color:white"></p>
-
+	<p style="color:white" align="justify">
+		Figure 2: Frame Blocking for 250 samples of speech vs Frame number<sup>3</sup>
+	</p>
+</figure>
 <h1 style="color:white">Windowing</h1>
 
 <p style="color:white;text-indent: 40px" align="justify">
@@ -80,8 +83,12 @@ We define the window as w(n), in the specified interval shown, where N is the nu
 A typical windowing process is the Hamming window, the reason for this is that they have a low impact on the amplitude accuracy for the frequency spectrum
 as oppose to other windows.
 	Shown below is the weight equation of the Hamming Window:</p>
-	
+ <figure class="right">	
   <img src="Picture2.png" alt="frame" height="400" width="600">
+	<p style="color:white" align="justify">
+		Figure 3: Window Equation<sup>1</sup>
+	</p>
+</figure>
 
 <h1 style="color:white">Fast Fourier Transform (FFT)</h1>
 
@@ -90,14 +97,24 @@ The FFT is a fast algorithm to implement the Discrete Fourier Transform (DFT), w
 Here, k = 0,1,2,...,N-1.
 In general, X sub k are complex numbers and we only consider their absolute values (frequency magnitudes).
 </p>
+	 <figure class="right">	
   <img src="Picture3.png" alt="frame" height="400" width="600">
+	<p style="color:white" align="justify">
+		Figure 4: Fast Fourier Transform Equation<sup>1</sup>
+	</p>
+</figure>
 	
-<h1 style="color:white"> Mel-frequency Wrapping</h1>
+<h1 style="color:white"> Mel-Frequency Wrapping</h1>
 
 <p style="color:white;text-indent: 40px" align="justify">One way to simulate the subjective spectrum is to use a filter bank, spaced uniformly on the mel-scale. 
 That filter bank has a triangular bandpass frequency response, and the spacing as well as the bandwidth is determined by a constant mel frequency interval.  
 The number of mel spectrum coefficients, K, is typically chosen as 20. </p>
+	 <figure class="right">	
   <img src="Picture4.png" alt="frame" height="400" width="600">
+	<p style="color:white" align="justify">
+		Figure 5: Mel-Frequency Spaced Filterbank Wrapping for test of 8 voices<sup>5</sup>
+	</p>
+</figure>
 	
 <h1 style="color:white">Cepstrum</h1>
 <p style="color:white;text-indent: 40px" align="justify">In the final step, we convert the log mel spectrum back to time.  The result is called the mel frequency cepstrum coefficients (MFCC).  The cepstral representation of the speech spectrum provides a good representation of the local spectral properties of the signal for the given frame analysis. 
@@ -107,12 +124,13 @@ In turn, this helps the system be able to capture the phonetic characteristics o
 Because the mel spectrum coefficients are real numbers, we can convert them to the time domain using the Discrete Cosine Transform (DCT):
 </p>
   <img src="Picture5.png" alt="frame" height="200" width="600">
+ <figure class="right">	
+  <img src="Picture5.png" alt="frame" height="400" width="600">
+	<p style="color:white" align="justify">
+		Figure 6: Cepstrum Equation<sup>1</sup>
+	</p>
+</figure>
 
-<div class="footnote">
-<ol>
- </ol>
-</div>
-</div>
 
 </body>
 </html>
