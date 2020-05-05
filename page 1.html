@@ -53,7 +53,7 @@ The 5 techniques depicted will be shown in more detail in their respective secti
 <p style="color:white;text-indent: 40px" align="justify">The input signal, which is our recorded voices, is blocked into frames of N samples with
 N having a typical value of 256 samples. 
 Now the reason for this is, if the samples are low like at 128 samples, then during training, it will have issues identifying distortion due to noninteger values. 
-This means that depending on the frequency of the will determine this issue. On the other hand for high sampling values, such as 512 samples,
+This means that depending on the frequency of the samples, it will give this issue. On the other hand for high sampling values, such as 512 samples,
 the samples incorrectly sample the amount needed for detection of voice. So when actual testing occurs, there needs to be more training on the system, for accuracy. 
 
 The Frames are then separated by a Frame Number, M 
