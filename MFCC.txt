@@ -1,0 +1,46 @@
+function r = MFCC(s, fs)
+% MFCC
+%
+% Inputs: s  contains the signal to analize
+%         fs is the sampling rate of the signal
+%
+% Output: r contains the transformed signal
+%
+%
+%%%%%%%%%%%%%%%%%%
+%
+% Author:     Amin Koohi(Sohrevardi)
+%              AminSohrevardi@yahoo.com , AminKoohi@yahoo.com
+
+m = 100;
+n = 256;
+l = length(s);
+%Frame Block: Takes the length of the voice and finds the difference in 
+%samples
+nbFrame = floor((l - n) / m) + 1;
+for i = 1:n
+    for j = 1:nbFrame
+        M(i, j) = s(((j - 1) * m) + i);
+    end
+end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Hamming: This goes through the window effect using the given amount of
+%samples and multipying it to the frame blocks
+h = hamming(n);
+M2 = diag(h) * M;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%FFT: Using the windowed freqeuncy, now we can do the fourier transform 
+%without truncating the data
+for i = 1:nbFrame
+    frame(:,i) = fft(M2(:, i));
+end
+
+%Mel Frequency Wrapping: Gives spacing to the spectrum by using log 
+m = melfb(20, n, fs);
+n2 = 1 + floor(n / 2);
+z = m * abs(frame(1:n2, :)).^2;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Cepstrum: Converts this back from log Mel to mimic human listening
+r = dct(log(z));
