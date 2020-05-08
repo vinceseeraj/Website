@@ -8,10 +8,10 @@
 %                       s1.wav, s2.wav, ..., sn.wav
 code={4};
 v={4};
-fs=12500;
+fs=48000;
 
 
-k = 256;                         % number of centroids required
+k = 16;                         % number of centroids required
  for i = 1:4                    % train a VQ codebook for each speaker
      file = sprintf('%ss%d.wav', '/speaking/data/train/', i);           
      disp(file);
