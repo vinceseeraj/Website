@@ -1,9 +1,10 @@
+%Created made by Travis Cooper
+%
 % Speaker Recognition: Testing Stage
 
 myVoice = audiorecorder(48000,16,1);
  
-% Define callbacks to show when
-% recording starts and completes.
+%Show when recording starts and ends
 myVoice.StartFcn = 'disp(''Start speaking.'')';
 record(myVoice, 1);
 
