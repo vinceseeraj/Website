@@ -1,4 +1,4 @@
-%Created made by Travis Cooper
+%Created made by Voice Recognition Team
 %
 % Speaker Recognition: Testing Stage
 
