@@ -1,11 +1,8 @@
+%Created made by Voice Recognition Team
+%
 % Speaker Recognition: Training Stage
-%
-% Output:
-%       code     : trained VQ codebooks, code{i} for i-th speaker
-%
-% Note:
-%       Sound files in traindir is supposed to be: 
-%                       s1.wav, s2.wav, ..., sn.wav
+
+
 code={4};
 v={4};
 fs=48000;
