@@ -116,9 +116,9 @@ In general, X sub k are complex numbers and we only consider their absolute valu
 	
 <h1 style="color:white"> Mel-Frequency Wrapping</h1>
 
-<p style="color:white;text-indent: 40px" align="justify">One way to simulate the subjective spectrum is to use a filter bank, spaced uniformly on the Mel-scale. 
+<p style="color:white;text-indent: 40px" align="justify">One way to simulate the subjective spectrum is to use a filter bank, spaced uniformly on the Mel-scale. As we discussed earlier, the MFCC is designed to mimic the human ear. It is known that human perception of the frequency contents of sound for speech signals does not follow a linear scale.  Thus for each tone with an actual frequency, f, measured in Hz, a subjective pitch is measured on a scale called the ‘mel’ scale. At lower frequencies before 1,000Hz, the signal characteristics are rather stationary while at larger frequencies of above 1,000Hz, the signal characteristics are more dynamic to reflect the different speech sounds that are spoken. Thus, in order to depict this, the mel-scale is used. 
 	That filter bank has a triangular bandpass frequency response, and the spacing, as well as the bandwidth, is determined by a constant Mel Frequency interval. 
-	The number of mel spectrum coefficients, K, is typically chosen as 20.
+	The number of mel spectrum coefficients, K, is typically chosen as 20. To summarize, lower frequencies are those before the 1,000 Hz mark while higher frequencies are those after 1,000Hz.
  </p>
 	 <figure class="right">	
   <img src="picture4.png" alt="frame" height="400" width="600">
